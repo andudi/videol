@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^docs/.* /index.php?args=none [NC,L]
+RewriteRule ^projects/.* /index.php?args=none [NC,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php?args=$1 [NC,L]

@@ -1,0 +1,19 @@
+# Howto handle video and gps data from the Contour2+ action cam
+
+# if video is splited in two
+file1=
+file2=
+printf "file '%s'\n" ${file1} ${file2} > files.list; base1=${file1##*/}; name1=${base1%\.*}; file=${name1}_.MOV
+ffmpeg -f concat -i files.list -map 0 -c copy ${file}; rm files.list
+
+# preparing path and filename of the video source file
+file=
+base=${file##*/}; name=${base%\.*}
+
+# extracting gps data out of video subtitles
+ffmpeg -i ${file} -map 0:2 ${name}.srt
+perl -pe "s/^[^\\$].*$//" ${name}.srt | gpsbabel -i nmea -f - -o gpx -F ${name}.gpx; rm ${name}.srt
+
+# video quality: 500kBit/s -> 4.5 MByte/min
+ffmpeg -i ${file} -c:v libx264 -s 640x360 -b:v 500k -c:a libvo_aacenc -b:a 56k -ar 22050 -sn ${name}.mp4
+ffmpeg -i ${file} -c:v libvpx -s 640x360 -b:v 500k -c:a libvorbis -b:a 56k -ar 22050 -sn ${name}.webm
