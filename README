@@ -1,0 +1,37 @@
+VideOL
+======
+// Project
+    Video Tracking for Orienteering Runners
+    Copyright: Andreas Dick, andudi(at)gmx(dot)ch
+    License: GPLv2
+
+// Features
+    - project management
+    - native html5 video playing
+    - drawing of map and gpx track
+    - referencing of timeoffset and track
+    - verry basic video and map control
+    - easy map and video conrol by key and mouse events
+    - multimap support
+
+// Whishlist
+    - more refpoints(?)
+    - help explaining event system
+    - ?
+
+// History
+v1.5    (06.12.2013)
+    - map and track without video
+    - movemode improved
+v1.4    (28.11.2013)
+    - multimap support
+    - start-end time limit
+v1.3:   (21.11.2013)
+    - improved mouse wheel
+    - statusline
+v1.2:   (10.11.2013)
+    - key and mouse event system
+v1.1:   (06.11.2013)
+    - allow datas storing on an external server
+v1.0:   (03.11.2013)
+    - initial release
