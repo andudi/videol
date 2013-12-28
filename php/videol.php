@@ -107,7 +107,7 @@
     <div style="text-align:right;">
         <br>
         <br>
-        VideOL_v1.3 by Andreas Dick
+        <a href="https://github.com/andudi/videol" target="_blank">VideOL</a> by Andreas Dick
     </div>
 
 </body>
