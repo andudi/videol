@@ -1,18 +1,18 @@
 VideOL
 ======
-// Project
-    Video Tracking for Orienteering Runners
-    Copyright: Andreas Dick, andudi(at)gmx(dot)ch
-    License: GPLv2
+// Video Tracking for Orienteering Runners
+    - copyright: Andreas Dick, andudi(at)gmx(dot)ch
+    - license: GPLv2
 
 // Features
-    - project management
+    - html5 video player with GPX based map indication
+    - project management implemented in PHP
+    - project data stored with JSON based text files
     - native html5 video playing
-    - drawing of map and gpx track
-    - referencing of timeoffset and track
-    - verry basic video and map control
-    - easy map and video conrol by key and mouse events
-    - multimap support
+    - drawing of map and gpx track with JavaScript and PaperJS
+    - referencing of timeoffset and track in editing mode
+    - easy map and video control with key and mouse events
+    - simple multimap support
 
 // Whishlist
     - more refpoints(?)
