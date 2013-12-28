@@ -1,7 +1,8 @@
 VideOL
 ======
 // Video Tracking for Orienteering Runners
-    - copyright: Andreas Dick, andudi(at)gmx(dot)ch
+    - copyright: Andreas Dick
+    - contact: andudi(at)gmx(dot)ch
     - license: GPLv2
 
 // Features
@@ -20,6 +21,8 @@ VideOL
     - ?
 
 // History
+v1.6    (28.12.2013)
+    - first version under githup
 v1.5    (06.12.2013)
     - map and track without video
     - movemode improved
