@@ -1,11 +1,5 @@
 # Howto handle video and gps data from the Contour2+ action cam
 
-# if video is splited in two
-file1=
-file2=
-printf "file '%s'\n" ${file1} ${file2} > files.list; base1=${file1##*/}; name1=${base1%\.*}; file=${name1}_.MOV
-ffmpeg -f concat -i files.list -map 0 -c copy ${file}; rm files.list
-
 # preparing path and filename of the video source file
 file=
 base=${file##*/}; name=${base%\.*}

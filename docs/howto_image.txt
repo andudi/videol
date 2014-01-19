@@ -1,5 +1,5 @@
 # Howto handle the map image
 
-# scanning the map with 150dpi
+# scanning the map with 200dpi
 # creating the image for the web:
 convert -rotate -90 -quality 80 /home/andi/scan.png map.jpg
