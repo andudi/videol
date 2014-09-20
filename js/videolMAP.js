@@ -97,7 +97,7 @@ VideolMAP = function(mapurl)
             var scale = (zoom > 0) ? factor : 1/factor;
             Map.scale(scale, Center);
 
-            myMAP.load_trackmap();
+            if (!myREF.is_trackmap()) myMAP.load_trackmap();
             myMAP.draw_all();
         }
         this.step_map = function(dirX, dirY)
@@ -108,7 +108,7 @@ VideolMAP = function(mapurl)
             var move = new Point(Math.round(-dirX*factor*Size.x), Math.round(+dirY*factor*Size.y));
             Map.translate(move);
             
-            myMAP.load_trackmap();
+            if (!myREF.is_trackmap()) myMAP.load_trackmap();
             myMAP.draw_all();
             myMAP.set_movemode(0);
         }

@@ -96,11 +96,7 @@ VideolTRG = function()
         if ((event.which == 1) && Mouse.active)
         {
             Mouse.active = false;
-            if (Mouse.moved)
-            {
-                myMAP.step_map(0,0);
-                event.stopPropagation();
-            }
+            if (Mouse.moved) myMAP.step_map(0,0);
         }
     });
     $("#canvas").on("mousemove", function(event)
