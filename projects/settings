@@ -1,0 +1,8 @@
+{
+"title":"VideOL - Video Tracking for Orienteering Runners",
+"masterkey":"123456",
+"default-name":"Test Name",
+"default-videourls":"http://www.andudi.ch/videol/",
+"default-trackurl":"http://www.andudi.ch/videol/gpx2jsonp.php?file=",
+"default-mapurl":"http://www.andudi.ch/videol/"
+}

@@ -1,4 +1,5 @@
 <?php
+    $prj->settings();
     $prj->load();
     if (!$prj->access) die("invalid key!");
     if (isset($_POST['save']))
@@ -9,7 +10,7 @@
 ?><!DOCTYPE html >
 <html>
 <head>
-    <title>VideOL - Video Tracking for Orienteering Runners</title>
+    <title><?=htmlspecialchars($prj->settings['title']);?></title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -17,15 +18,16 @@
 <body>
 
     <div>
-        <strong style="font-size:130%">VideOL - Video Tracking for Orienteering Runners</strong>
+        <strong style="font-size:130%"><?=htmlspecialchars($prj->settings['title']);?></strong>
     </div>
     
     <div>
         <br>
         <strong>Setup Project</strong>
-            (<a href="/">index</a>,
+            (
             <a href="/<?=$prj->project;?>">load</a>,
-            <a href="/<?=$prj->project;?>:<?=$prj->key;?>,edit">edit</a>)
+            <a href="/<?=$prj->project;?>:<?=$prj->key;?>,edit">edit</a>
+            )
         <form action="/<?=$prj->project;?>:<?=$prj->key;?>,setup" method="post">
             <? foreach ($prj->fields as $field => $name) { ?>
             <p>

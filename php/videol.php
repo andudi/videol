@@ -1,11 +1,12 @@
 <?php
+    $prj->settings();
     $prj->load();
     if ($prj->project == "") die("invalid project!");
     if ($prj->key && !$prj->access) die("invalid key!");
 ?><!DOCTYPE html>
 <html>
 <head>
-    <title>VideOL - Video Tracking for Orienteering Runners</title>
+    <title><?=htmlspecialchars($prj->settings['title']);?></title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -36,7 +37,7 @@
 <body>
 
     <div>
-        <strong style="font-size:130%">VideOL - Video Tracking for Orienteering Runners</strong>
+        <strong style="font-size:130%"><?=htmlspecialchars($prj->settings['title']);?></strong>
     </div>
     
     <div style="width:640;height:360;float:left;text-align:left;">
